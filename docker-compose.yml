@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  asir_bind_iago:
+    image: internetsystemsconsortium/bind9:9.16
+    ports:
+    - "5354:80"
+    volumes:
+    - ./configiago:/etc/bind \
+    - ./configiago2:/var/cache/bind \ 
+    - ./configiago3:/var/lib/bind \
+    - ./configiago4:/var/log 
+volumes:
+  configiago:
+  configiago2:
+  configiago3:
+  configiago4:
